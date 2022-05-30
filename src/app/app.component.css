@@ -1,0 +1,26 @@
+app-header {
+    position: fixed;
+    width: 100%;
+    top: 0 px;
+    height: 4 rem;
+    z-index: 2;
+}
+
+main {
+    top:4 rem;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.border-black{
+    border: 1px solid black;
+}
+
+app-side-nav {
+position: absolute;
+left: 0rem;
+width: 250px;
+height: calc(100vh-4rem);
+
+}
