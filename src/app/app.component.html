@@ -1,7 +1,14 @@
 <div class="container-fluid g-0">
-  <app-header></app-header>
+  <app-header 
+  (SideNavToggled)="SideNavStatus=$event;"
+  
+  ></app-header>
 
   <main>
-      <app-side-nav></app-side-nav>
-  </main>
+
+    <app-side-nav [SideNavStatus]="SideNavStatus" [ngClass]="{'app-side-nav-open':SideNavStatus}"></app-side-nav>
+    <div class="diplay-area p-3" [ngClass]="{'diplay-area-shrink':SideNavStatus}" >
+      <p class="fs-1 fw-bold fst-italic">Main area</p>
+    </div>
+    </main>
 </div>
